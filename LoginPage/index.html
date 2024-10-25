@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -13,31 +13,25 @@
     <section class="about" id="about">
         <div class="about-content">
             <div class="login-form">
-                <img src="https://www.mmumullana.org/wp-content/uploads/elementor/thumbs/mmdu-logo-inner-phu2q5qubti829yj7htre4c1j2ybchwscv7px07shs.png"
-                    class="img-logo">
-                    <form action="connect.php" method="post" role="form">
-                    <select name="role_id" class="form-control mt-3" id="role_id" required="true">
+                <img src="https://www.mmumullana.org/wp-content/uploads/elementor/thumbs/mmdu-logo-inner-phu2q5qubti829yj7htre4c1j2ybchwscv7px07shs.png" class="img-logo">
+                <form id="login-form" action="connect.php" method="post" role="form">
+                    <select name="role_id" class="form-control mt-3" id="role_id" required>
                         <option value="">Select Role</option>
-                        <!-- <option value="1">Admin</option> -->
                         <option value="2">Teacher</option>
                         <option value="3">Student</option>
                     </select>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="email" id="email"
-                            placeholder="UserName / Roll No / Admission No" autocomplete="off" required="true"/>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="User Name / Roll No / Admission No" autocomplete="off" required/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" id="password"
-                            placeholder="Password" autocomplete="off" required="true"/>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off" required/>
                     </div>
-                    <button type="submit" id="login-btn">
-                        Login
-                    </button>
+                    <button type="submit" id="login-btn">Login</button>
+                    <div class="error-message" style="color: red; font-size: 12px; margin-top: 10px;"></div>
                 </form>
             </div>
         </div>
     </section>
     <script src="script.js"></script>
 </body>
-
 </html>
